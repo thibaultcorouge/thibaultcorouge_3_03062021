@@ -8,6 +8,14 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+header i {
+  position: relative;
+  right: 80px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }
 header img {
   width: auto;
@@ -162,7 +170,7 @@ header img {
   padding-top: 40px;
   font-family: "roboto", sans-serif;
   background-color: #F2F2F2;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 .section-restaurant H1 {
   font-size: 25px;
@@ -217,13 +225,108 @@ header img {
   object-fit: cover;
 }
 
+.section-main img {
+  width: 375px;
+  height: 255px;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+.section-main .section-main_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  top: -40px;
+  background-color: #F2F2F2;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding-top: 20px;
+}
+.section-main .section-main_title H1 {
+  font-family: "shrikhand", cursive;
+  font-size: 26px;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+}
+.section-main .section-main_title i {
+  margin-right: 30px;
+}
+.section-main .section-main_title button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 15px 20px 15px 20px;
+  border: solid 0px;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px #939393;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  height: 50px;
+  width: 185px;
+}
+.section-main .section-main_title .section-main_element {
+  font-family: "roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-main .section-main_title .section-main_element H2 {
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  border-bottom: solid 3px #99E2D0;
+  padding-bottom: 5px;
+}
+.section-main .section-main_title .section-main_element a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 350px;
+  height: 70px;
+  box-shadow: 2px 2px 8px lightgray;
+  border-radius: 20px;
+  background-color: white;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  line-height: 10px;
+}
+.section-main .section-main_title .section-main_element a H2 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 10px;
+  border: none;
+  padding-bottom: 0px;
+}
+.section-main .section-main_title .section-main_element a H3 {
+  font-weight: 200;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.section-main .section-main_title .section-main_element a H4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
 footer {
+  z-index: 1;
   background-color: black;
   color: white;
   width: auto;
   font-family: "roboto", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
+  margin-top: -40px;
 }
 footer img {
   filter: invert(100%);
