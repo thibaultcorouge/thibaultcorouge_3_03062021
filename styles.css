@@ -274,15 +274,26 @@ header img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.section-main .section-main_title .section-main_element article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 .section-main .section-main_title .section-main_element H2 {
+  width: 45px;
   font-weight: 300;
   font-size: 16px;
   text-decoration: none;
   color: black;
   border-bottom: solid 3px #99E2D0;
   padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 13px;
 }
 .section-main .section-main_title .section-main_element a {
   color: black;
@@ -300,14 +311,14 @@ header img {
   margin-bottom: 6px;
   line-height: 10px;
 }
-.section-main .section-main_title .section-main_element a H2 {
+.section-main .section-main_title .section-main_element a H3 {
   font-weight: 500;
   font-size: 18px;
   margin-left: 10px;
   border: none;
   padding-bottom: 0px;
 }
-.section-main .section-main_title .section-main_element a H3 {
+.section-main .section-main_title .section-main_element a p {
   font-weight: 200;
   font-size: 15px;
   margin-left: 10px;
@@ -316,6 +327,11 @@ header img {
   font-size: 16px;
   font-weight: 500;
   margin-right: 20px;
+}
+.section-main .section-main_title .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
