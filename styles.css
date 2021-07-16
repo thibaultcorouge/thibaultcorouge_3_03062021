@@ -308,6 +308,10 @@ header img {
   border-top-right-radius: 20px;
   object-fit: cover;
 }
+.section-restaurant .section-restaurant_element:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
 
 .section-main img {
   width: 375px;
@@ -320,7 +324,6 @@ header img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   position: relative;
   top: -40px;
   background-color: #F2F2F2;
@@ -385,18 +388,22 @@ header img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-name: fadeIn;
+}
+.section-main .section-main_title .section-main_element .article-entrees {
+  opacity: 0.1;
+  animation: fadeIn 2s ease-in-out 1 forwards;
+}
+.section-main .section-main_title .section-main_element .article-plats {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 0.25s 1 forwards;
+}
+.section-main .section-main_title .section-main_element .article-desserts {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 0.5s 1 forwards;
 }
 @keyframes fadeIn {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
   }
   100% {
     opacity: 1;
