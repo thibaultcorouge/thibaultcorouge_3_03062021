@@ -83,12 +83,17 @@ header img {
   font-size: 16px;
   box-shadow: 2px 2px 5px #939393;
 }
+.section-top .section-top_button button:hover {
+  background: linear-gradient(#fc96df, #9660d8);
+  color: white;
+  box-shadow: 2px 2px 10px #939393;
+}
 
 .section-functionality {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: 28px;
+  justify-content: center;
+  align-items: center;
   font-family: "roboto", sans-serif;
   margin-top: 30px;
   margin-bottom: 60px;
@@ -194,6 +199,22 @@ header img {
 .section-restaurant .section-restaurant_element .section-restaurant_element_group i {
   font-size: 25px;
   font-weight: lighter;
+  cursor: pointer;
+  color: black;
+  transition: opacity 1s ease-in-out;
+  opacity: 0.5;
+}
+.section-restaurant .section-restaurant_element .section-restaurant_element_group i:hover {
+  color: #9356DC;
+  font-weight: 900;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+.section-restaurant .section-restaurant_element .section-restaurant_element_group i:active {
+  color: #9356DC;
+  font-weight: 900;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 .section-restaurant .section-restaurant_element .section-restaurant_element_name {
   line-height: 10px;
@@ -255,6 +276,21 @@ header img {
 }
 .section-main .section-main_title i {
   margin-right: 30px;
+  cursor: pointer;
+  transition: opacity 1s ease-in-out;
+  opacity: 0.5;
+}
+.section-main .section-main_title i:hover {
+  color: #9356DC;
+  font-weight: 900;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+.section-main .section-main_title i:active {
+  color: #9356DC;
+  font-weight: 900;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 .section-main .section-main_title button {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -269,6 +305,11 @@ header img {
   height: 50px;
   width: 185px;
 }
+.section-main .section-main_title button:hover {
+  background: linear-gradient(#fc96df, #9660d8);
+  color: white;
+  box-shadow: 2px 2px 10px #939393;
+}
 .section-main .section-main_title .section-main_element {
   font-family: "roboto", sans-serif;
   display: flex;
@@ -280,6 +321,22 @@ header img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .section-main .section-main_title .section-main_element H2 {
   width: 45px;
@@ -323,10 +380,32 @@ header img {
   font-size: 15px;
   margin-left: 10px;
 }
-.section-main .section-main_title .section-main_element a H4 {
+.section-main .section-main_title .section-main_element a .validate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.section-main .section-main_title .section-main_element a .validate H4 {
   font-size: 16px;
   font-weight: 500;
   margin-right: 20px;
+}
+.section-main .section-main_title .section-main_element a .validate i {
+  opacity: 0;
+  display: none;
+  color: white;
+  transition: transform 3s;
+}
+.section-main .section-main_title .section-main_element a:hover .validate {
+  transition: transform 1s linear;
+  transform: translateX(-50%);
+  display: flex;
+}
+.section-main .section-main_title .section-main_element a:hover .validate i {
+  display: flex;
+  color: black;
+  font-size: 20px;
+  transform: rotate(1turn);
 }
 .section-main .section-main_title .button {
   display: flex;
@@ -367,6 +446,9 @@ footer li {
 footer a {
   text-decoration: none;
   color: white;
+}
+footer a:hover {
+  text-decoration-line: underline;
 }
 footer i {
   padding-right: 5px;
