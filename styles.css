@@ -395,11 +395,11 @@ header img {
 }
 .section-main .section-main_title .section-main_element .article-plats {
   opacity: 0;
-  animation: fadeIn 2s ease-in-out 0.25s 1 forwards;
+  animation: fadeIn 2s ease-in-out 0.5s 1 forwards;
 }
 .section-main .section-main_title .section-main_element .article-desserts {
   opacity: 0;
-  animation: fadeIn 2s ease-in-out 0.5s 1 forwards;
+  animation: fadeIn 2s ease-in-out 1s 1 forwards;
 }
 @keyframes fadeIn {
   0% {
@@ -424,6 +424,10 @@ header img {
   margin-left: 13px;
 }
 .section-main .section-main_title .section-main_element a {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: hidden;
   color: black;
   text-decoration: none;
   display: flex;
@@ -433,49 +437,97 @@ header img {
   width: 350px;
   height: 70px;
   box-shadow: 2px 2px 8px lightgray;
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: white;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  line-height: 10px;
+  margin-bottom: 16px;
+  transition: 0.5s;
 }
-.section-main .section-main_title .section-main_element a H3 {
+.section-main .section-main_title .section-main_element a .ovrflow {
+  width: auto;
+  height: 70px;
+}
+.section-main .section-main_title .section-main_element a .ovrflow H3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-weight: 500;
   font-size: 18px;
   margin-left: 10px;
-  border: none;
-  padding-bottom: 0px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
-.section-main .section-main_title .section-main_element a p {
+.section-main .section-main_title .section-main_element a .ovrflow p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-weight: 200;
   font-size: 15px;
-  margin-left: 10px;
+  margin: 10px 0px 0px 10px;
 }
 .section-main .section-main_title .section-main_element a .validate {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  transition: transform 0.5s ease-in-out;
 }
 .section-main .section-main_title .section-main_element a .validate H4 {
+  position: relative;
+  top: 30px;
   font-size: 16px;
   font-weight: 500;
-  margin-right: 20px;
 }
-.section-main .section-main_title .section-main_element a .validate i {
-  opacity: 0;
-  display: none;
+.section-main .section-main_title .section-main_element a .validate .validate-back {
+  visibility: visible;
+  background: #99E2D0;
+  position: relative;
+  bottom: 24px;
+  left: 72px;
+  padding-left: 20px;
+  margin-left: -20px;
+  padding-top: 30px;
+  margin-top: -30px;
+  padding-bottom: 60px;
+  margin-bottom: -60px;
+}
+.section-main .section-main_title .section-main_element a .validate .validate-back i {
   color: white;
-  transition: transform 3s;
+  font-size: 22px;
+  opacity: 1;
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(-1turn);
+}
+.section-main .section-main_title .section-main_element a:hover {
+  box-shadow: 2px 2px 2px 2px lightgrey;
+  transition: 0.5s;
+  transform: scale(1.02);
+}
+.section-main .section-main_title .section-main_element a:hover .ovrflow {
+  animation: oft 0.5s forwards;
+  transition: animation 1s ease-in-out;
+}
+@keyframes oft {
+  from {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  to {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 .section-main .section-main_title .section-main_element a:hover .validate {
-  transition: transform 1s linear;
-  transform: translateX(-50%);
-  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-65px);
 }
-.section-main .section-main_title .section-main_element a:hover .validate i {
-  display: flex;
-  color: black;
-  font-size: 20px;
+.section-main .section-main_title .section-main_element a:hover .validate .validate-back {
+  visibility: visible;
+  background: #99E2D0;
+}
+.section-main .section-main_title .section-main_element a:hover .validate .validate-back i {
+  color: white;
+  opacity: 1;
+  transition: transform 0.5s ease-in-out;
   transform: rotate(1turn);
 }
 .section-main .section-main_title .button {
