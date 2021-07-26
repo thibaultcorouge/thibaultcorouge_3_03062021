@@ -5,13 +5,23 @@
   body .section-top .section-top_baseline H1 {
     width: auto;
   }
+  body .section-functionality {
+    display: flex;
+    flex-direction: column;
+  }
   body .section-functionality div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 15px;
+    width: auto;
+    min-width: 300px;
+  }
+  body .section-functionality p {
+    position: relative;
+    right: 34px;
   }
   body .section-restaurant_responsive {
     display: flex;
@@ -273,7 +283,7 @@ header img {
 }
 .section-functionality p {
   position: relative;
-  right: 13px;
+  right: 14px;
   border-radius: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -384,12 +394,6 @@ header img {
   color: transparent;
 }
 .section-restaurant .section-restaurant_element .section-restaurant_element_group i:hover {
-  font-weight: 900;
-  transition: opacity 1s ease-in-out;
-  opacity: 1;
-}
-.section-restaurant .section-restaurant_element .section-restaurant_element_group i:active {
-  color: #9356DC;
   font-weight: 900;
   transition: opacity 1s ease-in-out;
   opacity: 1;
